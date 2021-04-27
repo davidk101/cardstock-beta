@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import MapKit
 
 class HomeViewController: UIViewController {
+    
+    var delegate: CenterVCDelegate?
 
     override func viewDidLoad() {
         super.viewDidLoad()
