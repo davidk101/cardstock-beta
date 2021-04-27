@@ -3,16 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		985AD11E263792EF00661018 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AD11D263792EF00661018 /* AppDelegate.swift */; };
 		985AD120263792EF00661018 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AD11F263792EF00661018 /* SceneDelegate.swift */; };
-		985AD122263792EF00661018 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AD121263792EF00661018 /* ViewController.swift */; };
+		985AD122263792EF00661018 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AD121263792EF00661018 /* HomeViewController.swift */; };
 		985AD125263792EF00661018 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985AD123263792EF00661018 /* Main.storyboard */; };
 		985AD127263792F200661018 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 985AD126263792F200661018 /* Assets.xcassets */; };
 		985AD12A263792F200661018 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 985AD128263792F200661018 /* LaunchScreen.storyboard */; };
+		985AD14626379E1700661018 /* RoundedShadowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AD14526379E1700661018 /* RoundedShadowButton.swift */; };
+		985AD14C2637C09F00661018 /* LeftSidePanelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985AD14B2637C09F00661018 /* LeftSidePanelViewController.swift */; };
 		FDAF693E9631DDD620522184 /* Pods_cardstock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 85BD7E04725808515452097F /* Pods_cardstock.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,11 +25,13 @@
 		985AD11A263792EF00661018 /* cardstock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cardstock.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		985AD11D263792EF00661018 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		985AD11F263792EF00661018 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		985AD121263792EF00661018 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		985AD121263792EF00661018 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		985AD124263792EF00661018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		985AD126263792F200661018 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		985AD129263792F200661018 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		985AD12B263792F200661018 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		985AD14526379E1700661018 /* RoundedShadowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedShadowButton.swift; sourceTree = "<group>"; };
+		985AD14B2637C09F00661018 /* LeftSidePanelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftSidePanelViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +52,6 @@
 				33F64E9AFA70F76B19A2AFEE /* Pods-cardstock.debug.xcconfig */,
 				97AAF72D9668717417307791 /* Pods-cardstock.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -81,15 +84,41 @@
 		985AD11C263792EF00661018 /* cardstock */ = {
 			isa = PBXGroup;
 			children = (
+				985AD14426379CA000661018 /* Models */,
+				985AD14326379C9C00661018 /* Views */,
+				985AD14226379C8F00661018 /* Controllers */,
 				985AD11D263792EF00661018 /* AppDelegate.swift */,
 				985AD11F263792EF00661018 /* SceneDelegate.swift */,
-				985AD121263792EF00661018 /* ViewController.swift */,
 				985AD123263792EF00661018 /* Main.storyboard */,
 				985AD126263792F200661018 /* Assets.xcassets */,
 				985AD128263792F200661018 /* LaunchScreen.storyboard */,
 				985AD12B263792F200661018 /* Info.plist */,
 			);
 			path = cardstock;
+			sourceTree = "<group>";
+		};
+		985AD14226379C8F00661018 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				985AD121263792EF00661018 /* HomeViewController.swift */,
+				985AD14B2637C09F00661018 /* LeftSidePanelViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		985AD14326379C9C00661018 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				985AD14526379E1700661018 /* RoundedShadowButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		985AD14426379CA000661018 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -206,9 +235,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				985AD122263792EF00661018 /* ViewController.swift in Sources */,
+				985AD14C2637C09F00661018 /* LeftSidePanelViewController.swift in Sources */,
+				985AD122263792EF00661018 /* HomeViewController.swift in Sources */,
 				985AD11E263792EF00661018 /* AppDelegate.swift in Sources */,
 				985AD120263792EF00661018 /* SceneDelegate.swift in Sources */,
+				985AD14626379E1700661018 /* RoundedShadowButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
